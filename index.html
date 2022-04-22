@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapCal">
+        <form name="cal">
+            <h2>calculator</h2>
+            <input type="value" id="display">
+            <br><br>
+            <input type="button" value="9" onclick="cal.display.value+='9'">
+            <input type="button" value="8" onclick="cal.display.value+='8'">
+            <input type="button" value="7" onclick="cal.display.value+='7'">
+            <input type="button" value="+" onclick="cal.display.value+='+'">
+            <br><br>
+            <input type="button" value="6" onclick="cal.display.value+='6'">
+            <input type="button" value="5" onclick="cal.display.value+='5'">
+            <input type="button" value="4" onclick="cal.display.value+='4'">
+            <input type="button" value="-" onclick="cal.display.value+='-'">
+            <br><br>
+            <input type="button" value="3" onclick="cal.display.value+='3'">
+            <input type="button" value="2" onclick="cal.display.value+='2'">
+            <input type="button" value="1" onclick="cal.display.value+='1'">
+            <input type="button" value="*" onclick="cal.display.value+='*'">
+            <br><br>
+            <input type="button" value="0" onclick="cal.display.value+='0'">
+            <input type="button" value="/" onclick="cal.display.value+='/'">
+            <input type="button" value="%" onclick="cal.display.value+='%'">
+            <input type="button" value="=" onclick="cal.display.value=eval(cal.display.value)">
+            <br><br>
+            <div class="del">
+                <input id="deleteBtn" type="button" value="del" onclick="cal.display.value=''">
+                <input id="deleteBtn" type="button" value="Convert" onclick="show19()">
+            </div>
+        </form>
+    </div>
+    <!-- <<<<------CONVERTER-------<<<<<<     -->
+    <div class="wrapCon">
+        <h2>Converter</h2>
+        <div class="display">
+
+            <table class="table1" border="2" cellspacing="3" cellpadding="5">
+                <tr>
+                    <th>Kilo Meter:</th>
+                    <td>
+                        <input id="num" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Meter:</th>
+                    <td>
+                        <input id="num1">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="KmToM()">Result</button>
+                        <button onclick="clearFun()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table2" border="2" cellspacing="3" cellpadding="5">
+
+                <tr>
+                    <th>CentiMeter:</th>
+                    <td>
+                        <input id="num2" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Meter:</th>
+                    <td>
+                        <input id="num3">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="CmToM()">Result</button>
+                        <button onclick="clearFun()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table3" border="2" cellspacing="3" cellpadding="5">
+                <tr>
+
+                    <th>Character:</th>
+
+                    <td>
+                        <input type="text" id="volnum" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Answer:
+                    </th>
+                    <td>
+                        <input id="volAns" readonly>
+                        <!-- <p id="ans1"></p> -->
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="vowelCons()">Result</button>
+                        <button onclick="clearFun()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table4" border="2" cellspacing="3" cellpadding="5">
+                <tr>
+                    <th>
+                        Ascii-Code:
+                    </th>
+                    <td>
+                        <input type="text" id="AsciiNum" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Answer:
+                    </th>
+                    <td>
+                        <input id="AsciiAns" readonly>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="AsciiCode()">Result</button>
+                        <button onclick="clearFun()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table5" border="2" cellspacing="3" cellpadding="5">
+                <tr>
+                    <th>
+                        Enter_Num:
+                    </th>
+                    <td>
+                        <input type="text" id="ArmNum" claautocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        ArmStrong:
+                    </th>
+                    <td>
+                        <input id="ArmAns" readonly>
+                    </td>
+
+                </tr>
+                <tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="arm();">ArmStrong</button>
+
+                            <button onclick="clearFun();">Clear</button>
+                        </td>
+                    </tr>
+            </table>
+
+            <table class="table6" border="2" cellspacing="3" cellpadding="5">
+                <tr>
+                    <th>
+                        Enter_Num:
+                    </th>
+                    <td>
+                        <input type="text" id="PalNum" claautocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Palindrome:
+                    </th>
+                    <td>
+                        <input id="PalAns" readonly>
+                    </td>
+
+                </tr>
+                <tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="pal();">Palindrome</button>
+                            <button onclick="clearFun();">Clear</button>
+                        </td>
+                    </tr>
+            </table>
+
+            <table class="table7" border="2" cellspacing="1" cellpadding="3">
+                <tr>
+                    <th>
+                        F.Number:
+                    </th>
+                    <td>
+                        <input type="number" id="grNum1" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        S.Number:
+                    </th>
+                    <td>
+                        <input type="number" id="grNum2" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Answer:
+                    </th>
+                    <td>
+                        <input id="grAns" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button onclick="Greater();">GreaterNo</button>
+                        <button onclick="clearFun();">Clear</button>
+                    </td>
+                </tr>
+            </table>
+            <table class="table8" border="2" cellspacing="1" cellpadding="3">
+                <tr>
+                    <th>
+                        Enter_Number:
+                    </th>
+                    <td>
+                        <input type="number" id="EoNum" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <th>
+                            EvenOdd:
+                        </th>
+                        <td>
+                            <input id="EoAns" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="EvenOdd();">EvenOdd</button>
+                            <button onclick="clearFun();">Clear</button>
+                        </td>
+                    </tr>
+            </table>
+
+            <table class="table9" border="2" cellspacing="1" cellpadding="3">
+                <tr>
+                    <th>
+                        Enter_Number:
+                    </th>
+                    <td>
+                        <input type="number" id="LNum" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <th>
+                            Leap_Year:
+                        </th>
+                        <td>
+                            <input id="LAns" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="Leap();">Leap Year</button>
+                            <button onclick="clearFun();">Clear</button>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <br>
+        <!-- //////-------BUTTONS------\\\\\\ -->
+        <button onclick="show()" ondblclick="show2()" id="btn"> Kilometer</button>
+        <button onclick="show3()" ondblclick="show4()" id="btn"> Centimeter</button>
+        <button onclick="show5()" ondblclick="show6()" id="btn"> Vowel</button>
+        <br><br>
+        <button onclick="show7()" ondblclick="show8()" id="btn"> ASCII</button>
+        <button onclick="show9()" ondblclick="show10()" id="btn"> ArmStrong</button>
+        <button onclick="show11()" ondblclick="show12()" id="btn"> Palindrome</button>
+        <br><br>
+        <button onclick="show13()" ondblclick="show14()" id="btn"> GreaterNo</button>
+        <button onclick="show15()" ondblclick="show16()" id="btn"> EvenOdd</button>
+        <button onclick="show17()" ondblclick="show18()" id="btn"> LeapY</button>
+        <br><br>
+        <button onclick="show21()" id="btn"> Calculator</button>
+    </div>
+</body>
+</html>

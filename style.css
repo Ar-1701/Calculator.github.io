@@ -1,0 +1,171 @@
+body {
+    background-color: rgb(35, 35, 35);
+}
+
+.wrapCal {
+    background-image: radial-gradient(circle at top right, rgb(109, 122, 122)20%, gold 30%, tomato 65%);
+    margin: 0 380px 0;
+    width: 350px;
+    height: 490px;
+    box-shadow: 0 0 40px #2196f3, 0 0 60px #2196f3, 0 0 80px #2196f3;
+    position: fixed;
+    border-radius: 10px;
+}
+
+.wrapCon {
+    visibility: hidden;
+    background-image: radial-gradient(circle at top left, rgb(109, 122, 122)20%, gold 30%, tomato 65%);
+    box-shadow: 0 0 40px #2196f3, 0 0 60px #2196f3, 0 0 80px #2196f3;
+    margin: 0 380px 0;
+    width: 350px;
+    height: 490px;
+    position: fixed;
+    border-radius: 10px;
+}
+
+input[type='value'] {
+    color: red;
+    width: 250px;
+    margin: 0 35px 0;
+    height: 70px;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px #070707, 0px 0px 40px #070707, 0px 0px 60px #070707;
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline black;
+}
+
+input[type='button'] {
+    background-color: aqua;
+    color: rgb(12, 12, 12);
+    width: 50px;
+    margin: 0 15px 0;
+    height: 50px;
+    font-size: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #070707, 0px 0px 0px #070707, 0px 0px 0px #070707;
+}
+
+input[type='button']:focus {
+    background-color: rgb(4, 255, 0);
+    color: rgb(255, 0, 0);
+}
+
+input[type='button']:hover {
+    background-color: rgb(47, 0, 255);
+    color: white;
+    box-shadow: 0px 0px 10px #070707, 0px 0px 10px #070707, 0px 0px 20px #070707;
+}
+
+#deleteBtn {
+    height: 50px;
+    width: 120px;
+    font-size: 30px;
+    margin-left: 25px;
+    border-color: red;
+}
+
+
+/* display all converter */
+
+.table1 {
+    visibility: hidden;
+    margin: 10px 22px;
+    position: fixed;
+    background: #525252;
+}
+
+.table2 {
+    visibility: hidden;
+    margin: 10px 15px;
+    position: fixed;
+    background: #525252;
+}
+
+.table3 {
+    visibility: hidden;
+    margin: 12px 20px;
+    position: fixed;
+    background: #525252;
+}
+
+.table4 {
+    visibility: hidden;
+    margin: 12px 18px;
+    position: fixed;
+    background: #525252;
+}
+
+.table5 {
+    visibility: hidden;
+    margin: 12px 15px;
+    position: fixed;
+    background: #525252;
+}
+
+.table6 {
+    visibility: hidden;
+    margin: 12px 15px;
+    position: fixed;
+    background: #525252;
+}
+
+.table7 {
+    visibility: hidden;
+    margin: 4px 25px;
+    position: fixed;
+    background: #525252;
+}
+
+.table8 {
+    visibility: hidden;
+    margin: 20px 5px;
+    position: fixed;
+    background: #525252;
+}
+
+.table9 {
+    visibility: hidden;
+    margin: 20px 5px;
+    position: fixed;
+    background: #525252;
+}
+
+.display {
+    color: red;
+    width: 340px;
+    margin: 0 2px;
+    height: 150px;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: azure;
+    box-shadow: 0px 0px 7px #070707, 0px 0px 40px #070707, 0px 0px 60px #070707;
+}
+
+#btn {
+    background-color: aqua;
+    color: rgb(7, 7, 7);
+    height: 30px;
+    width: 100px;
+    font-size: 17px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #070707, 0px 0px 0px #070707, 0px 0px 10px #070707;
+}
+
+#btn:focus {
+    background-color: rgb(4, 255, 0);
+    color: rgb(255, 0, 0);
+    color: rgb(243, 13, 52);
+}
+
+#btn:hover {
+    background-color: rgb(47, 0, 255);
+}
